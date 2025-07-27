@@ -4,7 +4,7 @@ import React from "react";
 const Count = () => {
   return (
     <div className="my-gradient-bg max-w-screen-xl mx-auto flex flex-col gap-[10px] pt-[56px] pb-[130px]">
-      <div className="grid sm:grid-cols-4 grid-cols-2 gap-[115px] px-[109px]">
+      <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-[115px] gap-[50px] sm:px-[110px] px-[55px]">
         <div className="flex-count">
           <h3 className="count">10,000+</h3>
           <span className="count-name">Users</span>
@@ -24,7 +24,7 @@ const Count = () => {
       </div>
       <main className="pt-[120px]">
         <div className="flex flex-col items-center">
-          <h2 className="font-semibold text-[40px] leading-[1] tracking-[0] text-center">
+          <h2 className="font-semibold sm:text-[40px] text-[20px] leading-[1] tracking-[0] text-center">
             Our Smile{" "}
             <span className="relative inline-block">
               Addiction
@@ -39,10 +39,10 @@ const Count = () => {
           </h2>
         </div>
 
-        <div className="pl-[60px] pt-[110px] pr-[50px]">
-          <section className="flex gap-[64px] px-[40px] py-[60px] items-center">
+        <div className="sm:px-[60px] sm:pt-[110px] px-[25px] pt-[40px]">
+          <section className="flex sm:gap-[64px] gap-[20px] py-[60px] items-center">
             {/* Image */}
-            <div className="relative w-[440px] h-[890px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature1.jpg"
                 alt="feature1"
@@ -54,15 +54,15 @@ const Count = () => {
             {/* Text */}
             <div className="flex flex-col">
               <div className="flex flex-col gap-[16px] max-w-[600px]">
-                <h2 className="text-[32px] font-semibold leading-[1] tracking-[0] text-black">
+                <h2 className="sm:text-[32px] text-[18px] font-semibold leading-[1] tracking-[0] text-black">
                   AI Dental Chatbot 
                 </h2>
-                <span className="text-[24px] font-regular leading-[1] tracking-[0] text-[#575757]">
+                <span className="sm:text-[24px] text-[16px] font-regular leading-[1] tracking-[0] text-[#575757]">
                   Get Instant answers, 24/7.
                 </span>
               </div>
               <div className="max-w-[500px]">
-                <p className="text-[24px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
+                <p className="sm:text-[24px] text-[16px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
                   Have a toothache or worried about oral symptoms? Our smart
                   dental assistant listens, learns, and guides you through best
                   practices right from your phone.
@@ -71,25 +71,25 @@ const Count = () => {
             </div>
           </section>
 
-          <section className="flex gap-[180px] py-[60px] items-center">
+          <section className="flex sm:gap-[180px] gap-[30px] py-[60px] items-center">
             <div className="max-w-[600px]">
               <div className="flex flex-col gap-[16px] max-w-[600px]">
-                <h2 className="text-[32px] font-semibold leading-[1] tracking-[0] text-black">
+                <h2 className="sm:text-[32px] text-[18px] font-semibold leading-[1] tracking-[0] text-black">
                   Teledentistry Access
                 </h2>
-                <span className="text-[24px] font-regular leading-[1] tracking-[0] text-[#575757]">
+                <span className="sm:text-[24px] text-[16px] font-regular leading-[1] tracking-[0] text-[#575757]">
                   Expert dental care without the clinic Visit.
                 </span>
               </div>
               <div>
-                <p className="text-[24px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
+                <p className="sm:text-[24px] text-[16px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
                   Connect with licensed dentists from the comfort of your home.
                   Dentnoor makes expert consultations fast, affordable amd
                   stress free.
                 </p>
               </div>
             </div>
-            <div className="relative w-[440px] h-[890px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature2.png"
                 alt="feature2"
@@ -100,7 +100,7 @@ const Count = () => {
           </section>
 
           <section className="flex gap-[20px] py-[60px] items-center">
-            <div className="relative w-[440px] h-[890px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature3.png"
                 alt="feature3"
@@ -110,16 +110,16 @@ const Count = () => {
             </div>
             <div className="max-w-[600px]">
               <div className="flex flex-col gap-[16px] max-w-[600px]">
-                <h2 className="text-[32px] font-semibold leading-[1] tracking-[0] text-black">
+                <h2 className="sm:text-[32px] text-[18px] font-semibold leading-[1] tracking-[0] text-black">
                   Gamified Habit Tracker
                 </h2>
-                <span className="text-[24px] font-regular leading-[1] tracking-[0] text-[#575757]">
+                <span className="sm:text-[24px] text-[16px] font-regular leading-[1] tracking-[0] text-[#575757]">
                   Gain points, streaks and badge regards to encourage
                   consistency.
                 </span>
               </div>
               <div>
-                <p className="text-[24px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
+                <p className="sm:text-[24px] text-[16px] font-regular leading-[1.4] tracking-[0] text-[#575757]">
                   Gain points, straks and badge reeards to encourage
                   consistency. Track how well you are brushing and how
                   consistent you have been.
