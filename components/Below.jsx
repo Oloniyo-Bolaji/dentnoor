@@ -5,7 +5,7 @@ const Below = () => {
   return (
     <div className="sm:pt-[30px] pt-[10px] max-w-screen-xl mx-auto">
       <div className="relative">
-        <h2 className="sm:text-[40px] text-[20px] leading-none tracking-0 font-semibold text-center text-[#000000] capitalize">
+        <h2 className="sm:text-[40px] text-[15px] leading-none tracking-0 font-semibold text-center text-[#000000] capitalize">
           keep your family oral health excited
         </h2>
         <span className="absolute left-[980px] top-[20px]">
