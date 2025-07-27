@@ -5,15 +5,14 @@ const Hero = () => {
   return (
     <header
       style={{ backgroundImage: "url('/hero.png')" }}
-      className=" relative bg-no-repeat bg-center bg-cover pt-[15px] h-[950px] opacity-100 rotate-0 flex justify-between flex-col"
+      className=" relative bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-between flex-col"
     >
       <div className="w-full max-w-screen-xl mx-auto flex-col-center gap-[20px] pt-[10px] pb-[90px]">
-        <h1 className="font-semibold text-[64px] leading-[100%] text-center">
-          Start the day With a Bright{" "}
-          <span className="block text-center leading-tight">Smile</span>
+        <h1 className="sm:w-[900px] w-[400px] font-semibold sm:text-[64px] text-[45px] leading-[100%] text-center">
+          Start the day With a Bright Smile
         </h1>
 
-        <p className="font-semibold text-[24px] tracking-normal text-center text-[#787878] leading-[130%] w-[970px]">
+        <p className="font-semibold sm:text-[24px] text-[19px] tracking-normal text-center text-[#787878] leading-[130%] sm:w-[970px] w-[400px]">
           Your AI-powered oral health companion, making preventive dental care
           simple, personal and accessible for everyone.
         </p>
@@ -33,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full max-w-screen-xl mx-auto flex items-end pl-[90px]">
-        <div className="relative w-[380px] h-[360px]">
+        <div className="relative w-[380px] h-[360px] sm:block hidden">
           <Image
             src="/brush.png"
             alt="brushing"
