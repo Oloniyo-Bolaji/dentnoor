@@ -3,7 +3,7 @@ import React from "react";
 
 const Count = () => {
   return (
-    <div className="my-gradient-bg max-w-screen-xl mx-auto flex flex-col gap-[10px] pt-[56px] pb-[130px]">
+    <div className="my-gradient-bg max-w-screen-xl mx-auto flex flex-col gap-[10px] pt-[56px] sm:pb-[130px] pb-[50px]">
       <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-[115px] gap-[50px] sm:px-[110px] px-[40px]">
         <div className="flex-count">
           <h3 className="count">10,000+</h3>
@@ -22,7 +22,7 @@ const Count = () => {
           <span className="count-name">Countries Reached</span>
         </div>
       </div>
-      <main className="pt-[120px]">
+      <main className="sm:pt-[120px] pt-[50px]">
         <div className="flex flex-col items-center">
           <h2 className="font-semibold sm:text-[40px] text-[20px] leading-[1] tracking-[0] text-center">
             Our Smile{" "}
@@ -39,8 +39,8 @@ const Count = () => {
           </h2>
         </div>
 
-        <div className="sm:px-[60px] sm:pt-[110px] px-[25px] pt-[40px]">
-          <section className="flex sm:gap-[64px] gap-[20px] sm:py-[60px] py-[25px] items-center">
+        <div className="sm:px-[60px] sm:pt-[110px] px-[25px] pt-[40px] gap-0">
+          <section className="flex sm:gap-[64px] gap-[20px] sm:py-[60px] py-[20px] items-center">
             {/* Image */}
             <div className="relative sm:w-[440px] sm:h-[890px] w-[100px] h-[400px] flex-shrink-0">
               <Image
@@ -99,7 +99,7 @@ const Count = () => {
             </div>
           </section>
 
-          <section className="flex gap-[20px] py-[60px] items-center">
+          <section className="flex gap-[20px] sm:py-[60px] py-[25px] items-center">
             <div className="relative sm:w-[440px] sm:h-[890px] w-[100px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature3.png"
