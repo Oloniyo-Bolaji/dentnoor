@@ -4,7 +4,7 @@ import React from "react";
 const Count = () => {
   return (
     <div className="my-gradient-bg max-w-screen-xl mx-auto flex flex-col gap-[10px] pt-[56px] pb-[130px]">
-      <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-[115px] gap-[50px] sm:px-[110px] px-[55px]">
+      <div className="grid sm:grid-cols-4 grid-cols-2 sm:gap-[115px] gap-[50px] sm:px-[110px] px-[40px]">
         <div className="flex-count">
           <h3 className="count">10,000+</h3>
           <span className="count-name">Users</span>
@@ -40,9 +40,9 @@ const Count = () => {
         </div>
 
         <div className="sm:px-[60px] sm:pt-[110px] px-[25px] pt-[40px]">
-          <section className="flex sm:gap-[64px] gap-[20px] py-[60px] items-center">
+          <section className="flex sm:gap-[64px] gap-[20px] sm:py-[60px] py-[25px] items-center">
             {/* Image */}
-            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[100px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature1.jpg"
                 alt="feature1"
@@ -71,7 +71,7 @@ const Count = () => {
             </div>
           </section>
 
-          <section className="flex sm:gap-[180px] gap-[30px] py-[60px] items-center">
+          <section className="flex sm:gap-[180px] gap-[30px] sm:py-[60px] py-[25px] items-center">
             <div className="max-w-[600px]">
               <div className="flex flex-col gap-[16px] max-w-[600px]">
                 <h2 className="sm:text-[32px] text-[18px] font-semibold leading-[1] tracking-[0] text-black">
@@ -89,7 +89,7 @@ const Count = () => {
                 </p>
               </div>
             </div>
-            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[100px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature2.png"
                 alt="feature2"
@@ -100,7 +100,7 @@ const Count = () => {
           </section>
 
           <section className="flex gap-[20px] py-[60px] items-center">
-            <div className="relative sm:w-[440px] sm:h-[890px] w-[200px] h-[400px] flex-shrink-0">
+            <div className="relative sm:w-[440px] sm:h-[890px] w-[100px] h-[400px] flex-shrink-0">
               <Image
                 src="/feature3.png"
                 alt="feature3"

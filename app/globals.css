@@ -25,9 +25,9 @@
   @apply flex justify-center items-center;
 }
 @utility count {
-  @apply font-extrabold text-[45px] leading-[1] tracking-[0] text-[#009BDB];
+  @apply font-extrabold sm:text-[45px] text-[20px] leading-[1] tracking-[0] text-[#009BDB];
 }
 
 @utility count-name {
-  @apply font-medium text-[15px] leading-[1] tracking-[0] text-[#9C9C9C] text-center;
+  @apply font-medium sm:text-[15px] text-[13px] leading-[1] tracking-[0] text-[#9C9C9C] text-center;
 }

@@ -8,11 +8,11 @@ const Hero = () => {
       className=" w-full max-w-screen-xl mx-auto relative bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-end flex-col"
     >
       <div className="flex flex-col items-center gap-[20px] pt-[10px] sm:pb-[90px] pb-[40px]">
-        <h1 className="sm:w-[900px] w-[400px] font-semibold sm:text-[64px] text-[32px] leading-[100%] text-center">
+        <h1 className="sm:w-[900px] w-[350px] font-semibold sm:text-[64px] text-[32px] leading-[100%] text-center">
           Start the day With a Bright Smile
         </h1>
 
-        <p className="font-semibold sm:text-[24px] text-[15px] tracking-normal text-center text-[#787878] leading-[130%] sm:w-[970px] w-[400px]">
+        <p className="font-semibold sm:text-[24px] text-[15px] tracking-normal text-center text-[#787878] leading-[130%] sm:w-[970px] w-[350px]">
           Your AI-powered oral health companion, making preventive dental care
           simple, personal and accessible for everyone.
         </p>
@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full max-w-screen-xl mx-auto flex items-end sm:justify-start justify-center sm:pl-[90px]">
-        <div className="relative w-[380px] h-[360px] sm:block hidden">
+        <div className="relative sm:w-[380px] sm:h-[360px] w-[200px] h-[300px] sm:block hidden">
           <Image
             src="/brush.png"
             alt="brushing"
