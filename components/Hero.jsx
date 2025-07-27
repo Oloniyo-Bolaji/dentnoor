@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full max-w-screen-xl mx-auto flex items-end sm:justify-start justify-center sm:pl-[90px]">
-        <div className="relative sm:w-[380px] sm:h-[360px] w-[200px] h-[300px] sm:block hidden">
+        <div className="relative sm:w-[380px] sm:h-[360px] w-[500px] h-[200px] ">
           <Image
             src="/brush.png"
             alt="brushing"
@@ -41,7 +41,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="relative w-[440px] h-[500px]">
+        <div className="relative w-[440px] h-[500px] sm:block hidden">
           <Image
             src="/hero-screen.png"
             alt="screen"
