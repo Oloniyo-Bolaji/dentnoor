@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <header
       style={{ backgroundImage: "url('/hero.png')" }}
-      className="bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-between flex-col"
+      className=" relative bg-no-repeat bg-center bg-cover pt-[15px] h-[950px] opacity-100 rotate-0 flex justify-between flex-col"
     >
-      <div className="flex-col-center gap-[20px] pt-[10px] w-full pb-[90px]">
+      <div className="w-full max-w-screen-xl mx-auto flex-col-center gap-[20px] pt-[10px] pb-[90px]">
         <h1 className="font-semibold text-[64px] leading-[100%] text-center">
           Start the day With a Bright{" "}
           <span className="block text-center leading-tight">Smile</span>
@@ -32,7 +32,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-end pl-[100px] ">
+      <div className="w-full max-w-screen-xl mx-auto flex items-end pl-[90px]">
         <div className="relative w-[380px] h-[360px]">
           <Image
             src="/brush.png"
