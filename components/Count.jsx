@@ -3,7 +3,7 @@ import React from "react";
 
 const Count = () => {
   return (
-    <div className="my-gradient-bg flex flex-col gap-[10px] pt-[56px] pb-[130px]">
+    <div className="my-gradient-bg max-w-screen-xl mx-auto flex flex-col gap-[10px] pt-[56px] pb-[130px]">
       <div className="grid grid-cols-4 gap-[115px] px-[109px]">
         <div className="flex-count">
           <h3 className="count">10,000+</h3>

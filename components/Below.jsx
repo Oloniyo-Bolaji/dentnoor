@@ -3,7 +3,7 @@ import React from "react";
 
 const Below = () => {
   return (
-    <div className="pt-[30px]">
+    <div className="pt-[30px] max-w-screen-xl mx-auto">
       <div className="relative">
         <h2 className="text-[40px] leading-none tracking-0 font-semibold text-center text-[#000000] capitalize">
           keep your family oral health excited

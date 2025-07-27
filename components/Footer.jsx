@@ -21,7 +21,7 @@ const Footer = () => {
       )
     `,
       }}
-      className="flex justify-between flex-col gap-[120px] pt-[25px] pl-[55px] pr-[75px] pb-[55px]"
+      className="max-w-screen-xl mx-auto flex justify-between flex-col gap-[120px] pt-[25px] pl-[55px] pr-[75px] pb-[55px]"
     >
       <div className="flex justify-between">
         <div>

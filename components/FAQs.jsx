@@ -10,7 +10,7 @@ const FAQs = () => {
   ];
 
   return (
-    <div className="px-[75px] pt-[120px] pb-[170px]">
+    <div className="max-w-screen-xl mx-auto px-[75px] pt-[120px] pb-[170px]">
       <div className="mb-[79px] flex gap-[16px] flex-col">
         <h2 className="font-semibold text-[40px] leading-[100%] tracking-0">
           Why Dentnoor ?
