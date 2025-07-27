@@ -27,28 +27,28 @@ const Footer = () => {
         <div>
           <h2 className="font-extrabold text-[14px]">Dentnoor</h2>
           <div className="flex sm:gap-[10px] gap-[5px]">
-            <p className="font-medium text-[16px]">Us on social media</p>
+            <p className="font-medium sm:text-[16px] text-[13px]">Us on social media</p>
             <a href="/">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
-                className="w-[24px] h-[24px]"
+                className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
               />
             </a>
             <a href="/">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg"
-                className="w-[24px] h-[24px]"
+                className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
               />
             </a>
             <a href="/">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-                className="w-[24px] h-[24px]"
+                className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
               />
             </a>
           </div>
         </div>
-        <div className="flex sm:gap-[60px] gap-[30px]">
+        <div className="flex sm:gap-[60px] gap-[30px] sm:text-[16px] text-[13px]">
           <ul className="flex flex-col sm:gap-[16px] gap-[10px]">
             <li>Home</li>
             <li>Features</li>
@@ -61,8 +61,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center sm:gap-[15px] gap-[10px]">
-        <p className="font-regular text-[16px]">@Dentnoor Health System</p>
-        <span className="font-regular text-[16px]">All rights reserved</span>
+        <p className="font-regular sm:text-[16px] text-[13px]">
+          @Dentnoor Health System
+        </p>
+        <span className="font-regular sm:text-[16px] text-[13px]">
+          All rights reserved
+        </span>
       </div>
     </footer>
   );
