@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <header
       style={{ backgroundImage: "url('/hero.png')" }}
-      className=" relative bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-between flex-col"
+      className=" relative bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-end  flex-col"
     >
-      <div className="w-full max-w-screen-xl mx-auto flex-col-center gap-[20px] pt-[10px] pb-[90px]">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col items-center gap-[20px] pt-[10px] pb-[90px]">
         <h1 className="sm:w-[900px] w-[400px] font-semibold sm:text-[64px] text-[45px] leading-[100%] text-center">
           Start the day With a Bright Smile
         </h1>

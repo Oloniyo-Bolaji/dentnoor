@@ -6,7 +6,7 @@ const About = () => {
     <section className="flex justify-between bg-[#FFFFFF]">
       <div className="w-full max-w-screen-xl mx-auto flex gap-[100px] items-center sm:pl-[65px] sm:pr-[20px] px-[20px]">
 
-        <div className="flex flex-col gap-[24px] py-[160px] ">
+        <div className="flex flex-col gap-[24px] sm:py-[160px] py-[100px]">
           <h2 className="font-semibold text-[40px] leading-[50px] tracking-[0] text-[#121212] sm:w-[360px] w-full">
             Bridging the Dental Care Divide
           </h2>
