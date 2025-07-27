@@ -14,9 +14,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative w-full bg-[#ebf7ff91] z-[1000]">
+    <nav className="max-w-screen-xl mx-auto relative w-full bg-[#ebf7ff91] z-[1000]">
       {/* Main navbar row */}
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-[32px] h-[80px]">
+      <div className=" flex items-center justify-between px-[32px] h-[80px]">
         {/* Logo */}
         <div>
           <Image src="/Dentnoor.png" alt="logo" width={73} height={60} />
