@@ -53,7 +53,7 @@ const Navbar = () => {
 
       {/* Mobile Nav: put it outside the max-w wrapper */}
       {showMenu && (
-        <div className="flex sm:hidden flex-col items-center gap-[25px] absolute top-[80px] left-0 w-full bg-[#ebf7ff91] py-4 px-4 z-[999]">
+        <div className="flex sm:hidden flex-col items-center gap-[25px] absolute top-[80px] left-0 w-full bg-[#ebf7ff] py-4 px-4 z-[999]">
           <div className="flex flex-col gap-[20px] text-[14px] font-medium text-[#787878] items-center">
             <Link href="/" className="hover:text-black">Home</Link>
             <Link href="/" className="hover:text-black">About</Link>

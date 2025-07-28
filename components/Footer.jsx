@@ -28,22 +28,22 @@ const Footer = () => {
           <h2 className="font-extrabold text-[14px]">Dentnoor</h2>
           <div className="flex sm:gap-[10px] flex-col">
             <p className="font-medium sm:text-[16px] text-[13px]">
-              Us on social media
+              Connect With Us
             </p>
-            <div className="flex gap-[5px]">
-              <a href="/">
+            <div className="flex gap-[10px]">
+              <a href="https://x.com/dentnoorhq?t=-JK7R5me170mqTg1ckplDw&s=09">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
                   className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
                 />
               </a>
-              <a href="/">
+              <a href="https://wwww.facebook.com/share/16oASeCaH6">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg"
                   className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
                 />
               </a>
-              <a href="/">
+              <a href="https://www.linkedin.com/company/dentnoor/">
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
                   className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px]"
@@ -66,11 +66,8 @@ const Footer = () => {
       </div>
       <div className="flex flex-col justify-center items-center sm:gap-[15px] gap-[10px]">
         <p className="font-regular sm:text-[16px] text-[13px]">
-          @Dentnoor Health System
+          &copy; {new Date().getFullYear()} Dentnoor. All rights reserved.
         </p>
-        <span className="font-regular sm:text-[16px] text-[13px]">
-          All rights reserved
-        </span>
       </div>
     </footer>
   );

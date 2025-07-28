@@ -10,22 +10,22 @@ const Count = () => {
           <span className="count-name">Users</span>
         </div>
         <div className="flex-count">
+          <h3 className="count">250+</h3>
+          <span className="count-name">Dental Professionals </span>
+        </div>
+        <div className="flex-count">
+          <h3 className="count">24,678+</h3>
+          <span className="count-name">AI-Powered Conversations</span>
+        </div>
+        <div className="flex-count">
           <h3 className="count">12</h3>
-          <span className="count-name">Doctors Participating</span>
-        </div>
-        <div className="flex-count">
-          <h3 className="count">24,678</h3>
-          <span className="count-name">Brands Collaboration</span>
-        </div>
-        <div className="flex-count">
-          <h3 className="count">500</h3>
-          <span className="count-name">Countries Reached</span>
+          <span className="count-name">Countries with Early Adoption</span>
         </div>
       </div>
       <main className="sm:pt-[120px] pt-[50px]">
         <div className="flex flex-col items-center">
           <h2 className="font-semibold sm:text-[40px] text-[20px] leading-[1] tracking-[0] text-center">
-            Our Smile{" "}
+            Your Smile{" "}
             <span className="relative inline-block">
               Addiction
               <Image

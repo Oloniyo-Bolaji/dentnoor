@@ -11,10 +11,9 @@ const About = () => {
             Bridging the Dental Care Divide
           </h2>
           <p className="text-[20px]  tracking-[0] font-normal w-full sm:w-[670px] text-[#757575] leading-[25px]">
-            Millions in Africa region lack access to dental care, leaving
-            preventable oral diseases untreated. Dentnoor bridges the gap with
-            an AI-powered health assisstant designed for these underserved
-            communities.
+            Millions across Africa lack access to dental care, leaving
+            preventable oral diseases untreated. Dentnoor bridges this gap with
+            an AI-powered oral health assisstant designed for you where it's needed most.
           </p>
         </div>
       
