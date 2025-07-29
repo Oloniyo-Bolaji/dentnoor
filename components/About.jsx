@@ -7,10 +7,10 @@ const About = () => {
       <div className="w-full max-w-screen-xl mx-auto flex gap-[100px] items-center sm:pl-[65px] sm:pr-[20px] px-[20px]">
 
         <div className="flex flex-col gap-[24px] sm:py-[160px] py-[80px]">
-          <h2 className="font-semibold text-[40px] leading-[50px] tracking-[0] text-[#121212] sm:w-[360px] w-full">
+          <h2 className="font-semibold sm:text-[40px] text-[20px] leading-[50px] tracking-[0] text-[#121212] sm:w-[360px] w-full">
             Bridging the Dental Care Divide
           </h2>
-          <p className="text-[20px]  tracking-[0] font-normal w-full sm:w-[670px] text-[#757575] leading-[25px]">
+          <p className="sm:text-[20px] text-[15px] tracking-[0] font-normal w-full sm:w-[670px] text-[#757575] leading-[25px]">
             Millions across Africa lack access to dental care, leaving
             preventable oral diseases untreated. Dentnoor bridges this gap with
             an AI-powered oral health assisstant designed for you where it's needed most.
