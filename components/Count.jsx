@@ -55,7 +55,7 @@ const Count = () => {
             <div className="flex flex-col">
               <div className="flex flex-col gap-[16px] max-w-[600px]">
                 <h2 className="sm:text-[32px] text-[18px] font-semibold leading-[1] tracking-[0] text-black">
-                  AI Dental Chatbot 
+                  AI Dental Assistant 
                 </h2>
                 <span className="sm:text-[24px] text-[16px] font-regular leading-[1] tracking-[0] text-[#575757]">
                   Get Instant answers, 24/7.

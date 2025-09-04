@@ -8,7 +8,7 @@ const About = () => {
 
         <div className="flex flex-col gap-[24px] sm:py-[160px] py-[80px]">
           <h2 className="font-semibold sm:text-[40px] text-[20px] leading-[50px] tracking-[0] text-[#121212] sm:w-[360px] w-full">
-            Bridging the Dental Care Divide
+            Bridging the Dental Care Gap
           </h2>
           <p className="sm:text-[20px] text-[15px] tracking-[0] font-normal w-full sm:w-[670px] text-[#757575] leading-[25px]">
             Millions across Africa lack access to dental care, leaving
