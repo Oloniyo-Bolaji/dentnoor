@@ -1,13 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
-    <header
-      style={{ backgroundImage: "url('/hero.png')" }}
-      className=" w-full max-w-screen-xl mx-auto relative bg-no-repeat bg-center bg-cover pt-[15px] opacity-100 rotate-0 flex justify-end flex-col"
-    >
-      <div className="flex flex-col items-center gap-[20px] pt-[10px] sm:pb-[90px] pb-[40px]">
+    <section className="w-full max-w-screen-xl mx-auto relative bg-[url('/hero.png')] bg-no-repeat bg-center bg-cover pt-4 opacity-100 rotate-0 flex justify-end flex-col">
+      <div className="flex flex-col items-center gap-5 pt-2.5 sm:pb-22 pb-10">
         <h1 className="sm:w-[900px] w-[350px] font-semibold sm:text-[64px] text-[32px] leading-[100%] text-center">
           Start the day With a Bright Smile
         </h1>
@@ -16,41 +14,50 @@ const Hero = () => {
           Your AI-powered oral health companion, making preventive dental care
           simple, personal and accessible for everyone.
         </p>
-        <div className="flex gap-[10px] justify-center">
-          <button className="rounded-[15px] bg-[#009bdb] text-[#ffffff] text-[14px] font-medium sm:w-[200px] w-[150px] h-[40px]">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdEBeW2VkzNS_RGA3o3_REHmndZXOK-7m6OnpxYJVjyVyJ2hA/viewform"
-            >
-              Join Waitlist
-            </a>
-          </button>
-          <button className="rounded-[15px]  bg-[#78787826] text-black text-[14px] sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]">
-            <a href="">Try for Free </a>
-          </button>
+        <div className="flex gap-2.5 justify-center">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join the waitlist"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdEBeW2VkzNS_RGA3o3_REHmndZXOK-7m6OnpxYJVjyVyJ2hA/viewform"
+            className="flex justify-center items-center rounded-[15px] bg-[#009bdb] text-[#ffffff] text-[14px] font-medium sm:w-[200px] w-[150px] h-[40px]"
+          >
+            Join Waitlist
+          </Link>
+          <Link
+            href=""
+            aria-label="Try our features for free"
+            className="flex justify-center items-center rounded-[15px]  bg-[#78787826] text-black text-[14px] sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]"
+          >
+            Try for Free
+          </Link>
         </div>
       </div>
-      <div className="w-full max-w-screen-xl mx-auto flex items-end sm:justify-start justify-center sm:pl-[90px]">
-        <div className="relative sm:w-[380px] sm:h-[360px] w-[500px] h-[200px] ">
+      <div className="max-w-screen-xl mx-auto flex items-end sm:justify-start justify-center sm:pl-20">
+        {/* Brush Image */}
+        <div className="relative sm:w-96 sm:h-80 w-72 h-40">
           <Image
             src="/brush.png"
-            alt="brushing"
+            alt="Illustration of a toothbrush"
             fill
+            sizes="(max-width: 768px) 288px, 384px"
             className="object-contain"
+            priority
           />
         </div>
 
+        {/* Screen Image */}
         <div className="relative w-[440px] h-[500px] sm:block hidden">
           <Image
             src="/hero-screen.png"
-            alt="screen"
+            alt="App screen showing dental companion interface"
             fill
+            sizes="440px"
             className="object-contain"
           />
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 

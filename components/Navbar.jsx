@@ -5,18 +5,25 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const toggle = () => {
-    setShowMenu((prev) => !prev);
-  };
+  const toggle = () => setShowMenu((prev) => !prev);
+
+  // ✅ Centralized nav links
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/" },
+    { label: "Features", href: "/" },
+  ];
 
   return (
-    <nav className="max-w-screen-xl mx-auto relative w-full bg-[#ebf7ff91] z-[1000]">
+    <nav className="relative w-full bg-[#ebf7ff91] z-[1000]">
       {/* Main navbar row */}
-      <div className=" flex items-center justify-between sm:px-[32px] px-[20px] h-[80px]">
+      <div className=" flex-between-center sm:px-8 px-5 h-20">
         {/* Logo */}
         <div>
           <Image src="/Dentnoor.png" alt="logo" width={73} height={60} />
@@ -24,46 +31,61 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <div
-          className="sm:hidden block text-[30px] text-[#009bdb]"
+          className="sm:hidden block text-3xl text-[#009bdb]"
           onClick={toggle}
         >
           {showMenu ? <IoIosClose /> : <IoMenu />}
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden sm:flex items-center justify-between lg:gap-[360px] sm:gap-[100px]">
+        <div className="hidden sm:flex items-center justify-between lg:gap-90 sm:gap-25">
           {/* Links */}
-          <div className="flex gap-[30px] text-[12px] font-medium text-[#787878]">
-            <Link href="/" className="hover:text-black">Home</Link>
-            <Link href="/" className="hover:text-black">About</Link>
-            <Link href="/" className="hover:text-black">Features</Link>
+          <div className="flex gap-8 text-xs font-medium text-[#787878]">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="hover:text-black"
+                aria-label={`Visit Dentnoor ${link.label} page`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-[25px]">
-            <button className="rounded-[15px] bg-[#009bdb] text-white text-[14px] w-[110px] h-[35px] font-medium">
+          <div className="flex gap-6">
+            <button className="rounded-2xl bg-[#009bdb] text-white text-sm w-28 h-9 font-medium">
               Sign up
             </button>
-            <button className="rounded-[15px] border border-[#e0e0e0] text-[#121212] text-[14px] w-[110px] h-[35px] font-medium">
+            <button className="rounded-2xl border border-[#e0e0e0] text-[#121212] text-sm w-28 h-9 font-medium">
               Log in
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Nav: put it outside the max-w wrapper */}
+      {/* Mobile Nav */}
       {showMenu && (
-        <div className="flex sm:hidden flex-col items-center gap-[25px] absolute top-[80px] left-0 w-full bg-[#ebf7ff] py-4 px-4 z-[999]">
-          <div className="flex flex-col gap-[20px] text-[14px] font-medium text-[#787878] items-center">
-            <Link href="/" className="hover:text-black">Home</Link>
-            <Link href="/" className="hover:text-black">About</Link>
-            <Link href="/" className="hover:text-black">Features</Link>
+        <div className="flex sm:hidden flex-col items-center gap-6 absolute top-20 left-0 w-full bg-[#ebf7ff] py-4 px-4 z-[999]">
+          <div className="flex flex-col gap-5 text-sm font-medium text-[#787878] items-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="hover:text-black"
+                aria-label={`Visit Dentnoor ${link.label} page`}
+                onClick={() => setShowMenu(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-col gap-[15px] mt-2 items-center">
-            <button className="rounded-[15px] bg-[#009bdb] text-white text-[14px] w-[110px] h-[35px] font-medium">
+            <button className="rounded-[15px] bg-[#009bdb] text-white text-sm w-28 h-9 font-medium">
               Sign up
             </button>
-            <button className="rounded-[15px] border border-[#e0e0e0] text-[#121212] text-[14px] w-[110px] h-[35px] font-medium">
+            <button className="rounded-[15px] border border-[#e0e0e0] text-[#121212] text-sm w-28 h-9 font-medium">
               Log in
             </button>
           </div>

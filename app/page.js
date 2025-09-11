@@ -1,11 +1,10 @@
 import About from "@/components/About";
 import Below from "@/components/Below";
-import Count from "@/components/Count";
-import FAQs from "@/components/FAQs";
+import Features from "@/components/Features";
+import Reasons from "@/components/Reasons";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 const Home = () => {
   return (
@@ -13,8 +12,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
-      <Count />
-      <FAQs />
+      <Features />
+      <Reasons />
       <Below />
       <Footer />
     </div>
