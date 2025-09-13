@@ -20,14 +20,14 @@ const Hero = () => {
             rel="noopener noreferrer"
             aria-label="Join the waitlist"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdEBeW2VkzNS_RGA3o3_REHmndZXOK-7m6OnpxYJVjyVyJ2hA/viewform"
-            className="flex justify-center items-center rounded-[15px] bg-[#009bdb] text-[#ffffff] text-[14px] font-medium sm:w-[200px] w-[150px] h-[40px]"
+            className="flex-center rounded-2xl bg-[#009bdb] text-[#ffffff] text-sm font-medium sm:w-[200px] w-[150px] h-[40px]"
           >
             Join Waitlist
           </Link>
           <Link
             href=""
             aria-label="Try our features for free"
-            className="flex justify-center items-center rounded-[15px]  bg-[#78787826] text-black text-[14px] sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]"
+            className="flex-center rounded-2xl  bg-[#78787826] text-black text-sm sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]"
           >
             Try for Free
           </Link>

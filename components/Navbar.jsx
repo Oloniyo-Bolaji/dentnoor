@@ -5,15 +5,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
-import { useSession, signIn, signOut } from "next-auth/react"
-
+import AuthButton from "@/sub-components/AuthButton";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggle = () => setShowMenu((prev) => !prev);
 
-  // ✅ Centralized nav links
+  // ✅ nav links
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/" },
@@ -54,14 +53,7 @@ const Navbar = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-6">
-            <button className="rounded-2xl bg-[#009bdb] text-white text-sm w-28 h-9 font-medium">
-              Sign up
-            </button>
-            <button className="rounded-2xl border border-[#e0e0e0] text-[#121212] text-sm w-28 h-9 font-medium">
-              Log in
-            </button>
-          </div>
+          <AuthButton />
         </div>
       </div>
 
@@ -81,14 +73,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <div className="flex flex-col gap-[15px] mt-2 items-center">
-            <button className="rounded-[15px] bg-[#009bdb] text-white text-sm w-28 h-9 font-medium">
-              Sign up
-            </button>
-            <button className="rounded-[15px] border border-[#e0e0e0] text-[#121212] text-sm w-28 h-9 font-medium">
-              Log in
-            </button>
-          </div>
+          <AuthButton />
         </div>
       )}
     </nav>
