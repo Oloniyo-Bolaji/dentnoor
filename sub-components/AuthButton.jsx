@@ -10,7 +10,7 @@ const AuthButton = () => {
   return (
     <div>
       {session?.user ? (
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-6">
           <Image
             src={session.user.image ?? "/user.png"}
             alt="avatar"

@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ handleOpen }) => {
   return (
     <section className="w-full max-w-screen-xl mx-auto relative bg-[url('/hero.png')] bg-no-repeat bg-center bg-cover pt-4 opacity-100 rotate-0 flex justify-end flex-col">
       <div className="flex flex-col items-center gap-5 pt-2.5 sm:pb-22 pb-10">
@@ -27,6 +29,7 @@ const Hero = () => {
           <Link
             href=""
             aria-label="Try our features for free"
+            onClick={handleOpen}
             className="flex-center rounded-2xl  bg-[#78787826] text-black text-sm sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]"
           >
             Try for Free

@@ -31,3 +31,13 @@
 @utility count-name {
   @apply font-medium sm:text-[15px] text-[13px] leading-[1] tracking-[0] text-[#9C9C9C] text-center;
 }
+
+.my-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 94, 143, 0.9) 27.62%,
+    rgba(2, 72, 115, 0.9) 40.69%,
+    rgba(3, 33, 67, 0.9) 64.38%,
+    rgba(3, 33, 67, 0.9) 93.74%
+  );
+}
