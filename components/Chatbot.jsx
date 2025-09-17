@@ -72,7 +72,7 @@ const Chatbot = ({ currentUser }) => {
   };
 
   return (
-    <div className="fixed bottom-16 right-5 w-100 h-96 my-gradient rounded-2xl shadow-lg flex flex-col">
+    <div className="max-w-md fixed bottom-16 right-5 w-100 h-96 my-gradient rounded-2xl shadow-lg flex flex-col">
       {/* Header */}
       <div className="flex flex-col items-center mt-2">
         <div className="h-0.5 w-5 rounded bg-white" aria-hidden="true" />

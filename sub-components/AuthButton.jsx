@@ -26,7 +26,7 @@ const AuthButton = () => {
           </button>
         </div>
       ) : (
-        <div className="flex gap-6">
+        <div className="flex flex-col sm:flex-row gap-6">
           <button
             onClick={() => signIn("google")}
             className="rounded-2xl bg-[#009bdb] text-white text-sm w-28 h-9 font-medium"
