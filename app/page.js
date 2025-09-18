@@ -35,7 +35,7 @@ const Home = () => {
       {/* Floating Button */}
       <button
         onClick={handleOpen}
-        className="fixed bottom-5 right-5 bg-[#009bdb] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#009bdb]/60 transition"
+        className="animate-pulse fixed bottom-5 right-5 bg-[#009bdb] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#009bdb]/60 transition"
       >
         {isOpen ? <IoClose /> : <FaRobot />}
       </button>
