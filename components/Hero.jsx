@@ -27,9 +27,8 @@ const Hero = ({ handleOpen }) => {
             Join Waitlist
           </Link>
           <Link
-            href=""
+            href="/ai-assistant"
             aria-label="Try our features for free"
-            onClick={handleOpen}
             className="flex-center rounded-2xl  bg-[#78787826] text-black text-sm sm:w-[200px] w-[150px] h-[40px] border border-[#e0e0e0]"
           >
             Try for Free

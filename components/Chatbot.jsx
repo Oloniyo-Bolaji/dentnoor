@@ -1,15 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { IoSend } from "react-icons/io5";
 import { RiVoiceprintFill } from "react-icons/ri";
+import { useSession } from "next-auth/react";
 
-const Chatbot = ({ currentUser }) => {
+const Chatbot = () => {
+  const { data: session } = useSession();
+
   const [question, setQuestion] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [userDetails, setUserDetails] = useState(null);
   const [loading, setLoading] = useState(false);
-  const userId = currentUser?.id;
+  const userId = session?.user?.id;
   const chatEndRef = useRef();
 
   useEffect(() => {
@@ -41,7 +46,9 @@ const Chatbot = ({ currentUser }) => {
 
   const sendMessage = async (e) => {
     e.preventDefault();
+
     if (!question.trim()) return;
+    if (!session) return alert("Please sign up");
 
     const userMessage = { role: "user", content: question };
     setChatHistory((prev) => [...prev, userMessage]);
@@ -72,7 +79,7 @@ const Chatbot = ({ currentUser }) => {
   };
 
   return (
-    <div className="my-gradient fixed bottom-16 right-4 w-[90%] max-w-xs sm:max-w-sm h-80 sm:h-96 rounded-2xl shadow-lg flex flex-col overflow-hidden z-40">
+    <div className="my-gradient w-full h-screen shadow-lg flex flex-col overflow-hidden z-40">
       {/* Header */}
       <div className="flex flex-col items-center mt-2">
         <div className="h-0.5 w-5 rounded bg-white" aria-hidden="true" />
