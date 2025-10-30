@@ -16,7 +16,10 @@ export async function GET(req) {
     const userId = searchParams.get("userId");
 
     if (!userId) {
-      return NextResponse.json({ success: false, error: "Missing userId" }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: "Missing userId" },
+        { status: 400 }
+      );
     }
 
     const history = await db.query.chatHistories.findFirst({
@@ -33,7 +36,10 @@ export async function GET(req) {
     });
   } catch (err) {
     console.error("Chat GET Error:", err);
-    return NextResponse.json({ success: false, error: err.message }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: err.message },
+      { status: 500 }
+    );
   }
 }
 
@@ -45,12 +51,15 @@ export async function POST(req) {
     const { userId, message } = await req.json();
 
     if (!userId || !message) {
-      return NextResponse.json({ success: false, error: "Missing userId or message" }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: "Missing userId or message" },
+        { status: 400 }
+      );
     }
 
     // Generate AI response
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
       contents: [
         {
           role: "model",
@@ -82,7 +91,11 @@ export async function POST(req) {
       .onConflictDoUpdate({
         target: chatHistories.userId,
         set: {
-          messages: sql`${chatHistories.messages} || ${JSON.stringify(newMessages)}::jsonb`,
+          messages: sql.raw(
+            `"chat_histories"."messages" || '${JSON.stringify(
+              newMessages
+            )}'::jsonb`
+          ),
           updatedAt: new Date(),
         },
       });
@@ -102,6 +115,9 @@ export async function POST(req) {
     });
   } catch (err) {
     console.error("Chat POST Error:", err);
-    return NextResponse.json({ success: false, error: err.message }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: err.message },
+      { status: 500 }
+    );
   }
 }
