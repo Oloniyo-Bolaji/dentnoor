@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 import { IoSend } from "react-icons/io5";
 import { RiVoiceprintFill } from "react-icons/ri";
 import { useSession } from "next-auth/react";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const Chatbot = () => {
   const { data: session } = useSession();
@@ -30,7 +32,6 @@ const Chatbot = () => {
             Array.isArray(data.data.messages) ? data.data.messages : []
           );
           setUserDetails(data.data.user || null);
-          console.log(data.data.user);
         }
       } catch (err) {
         console.log("Fetch history error:", err);
@@ -106,9 +107,14 @@ const Chatbot = () => {
                 width={30}
                 height={30}
               />
-              <div>
-                <ReactMarkdown>{msg.content}</ReactMarkdown>
-              </div>
+               <div className="prose max-w-none prose-headings:font-semibold prose-headings:text-gray-800 prose-p:text-gray-700 prose-strong:text-gray-900 prose-table:border prose-table:border-gray-300 prose-th:bg-gray-100 prose-th:p-2 prose-td:p-2 prose-th:border prose-th:border-gray-300 prose-td:border prose-td:border-gray-300 prose-ul:my-2 prose-li:my-1">
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  >
+                    {msg.content}
+                  </ReactMarkdown>
+                  </div>
             </div>
           );
         })}

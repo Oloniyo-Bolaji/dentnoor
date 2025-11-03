@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { GoogleGenAI } from "@google/genai";
 import { db } from "@/lib/database";
 import { chatHistories } from "@/lib/database/schema";
 import { eq, sql } from "drizzle-orm";
+import Groq from "groq-sdk";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 /* ========= GET =========
    Fetch chat history + user details
@@ -58,22 +58,21 @@ export async function POST(req) {
     }
 
     // Generate AI response
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [
+    const response = await groq.chat.completions.create({
+      model: "openai/gpt-oss-20b",
+      messages: [
         {
-          role: "model",
-          parts: [
-            {
-              text: "You are an oral health assistant. Only answer questions about dentistry, oral hygiene, gum care, cavities, toothaches, braces, and dental health. If unrelated, politely decline.",
-            },
-          ],
+          role: "system",
+          content:
+            "You are an oral health assistant. Only answer questions about dentistry, oral hygiene, gum care, cavities, toothaches, braces, and dental health. If unrelated, politely decline. CRITICAL: No code blocks.",
         },
-        { role: "user", parts: [{ text: message }] },
+        { role: "user", content: message },
       ],
     });
 
-    const aiReply = response.text || "Sorry, I couldn’t generate a reply.";
+    const aiReply =
+      response.choices[0]?.message?.content ||
+      "Sorry, I couldn’t generate a reply.";
 
     const newMessages = [
       { role: "user", content: message },
